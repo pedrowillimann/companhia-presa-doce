@@ -1,0 +1,344 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nefasto — Nightblade Vampiro Assassino 1–50</title>
+<style>
+body{font-family:system-ui,Arial,sans-serif;max-width:1050px;margin:auto;padding:24px;background:#101318;color:#eef2f6}
+h1{margin-bottom:4px}h2{margin-top:0}.sub,small,p{color:#bec7d1}.card{background:#191f27;border:1px solid #303946;border-radius:12px;padding:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.level,.skill,.task{background:#222a34;border-radius:9px;padding:11px;margin:7px 0}
+.level{display:grid;grid-template-columns:1fr 120px 90px;gap:8px;align-items:center}input[type=number]{width:65px;padding:6px;background:#101318;color:white;border:1px solid #465263;border-radius:6px}
+button{padding:9px 12px;border:0;border-radius:8px;cursor:pointer;margin-right:6px}.progress{height:14px;background:#303946;border-radius:20px;overflow:hidden}.bar{height:100%;background:#ddd;width:0%}
+.warn{padding:12px;border-left:4px solid #ddd;background:#222a34}.done{opacity:.55}.done b{text-decoration:line-through}@media(max-width:650px){.level{grid-template-columns:1fr}}
+</style></head><body>
+<h1>Nefasto</h1><div class="sub">Dunmer • Nightblade • Vampiro Assassino • Dual Wield / duas adagas • PvE + caminho para PvP • iniciante absoluto</div>
+
+<section class="card"><h2>Painel</h2><div class="grid"><div><b>Nível atual:</b> <span id="current">1</span></div>
+<div><b>Stamina registrada:</b> <span id="total">0</span> / <span id="expected">0</span></div></div>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<p><button id="next">+ Subi de nível</button><button id="reset">Resetar tudo</button></p><div class="warn" id="now"></div></section>
+
+<section class="card"><h2>Atributos nível por nível</h2>
+<p>Para deixar o primeiro personagem simples, coloque os pontos em <b>Stamina</b> durante o leveling. O objetivo é um assassino melee de duas adagas. Depois do 50, a distribuição pode ser ajustada para a build PvP/PvE definitiva.</p><div class="level" data-level="2">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 2</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="3">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 3</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="4">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 4</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="5">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 5</b></label>
+<span>+2 Stamina</span>
+<input type="number" min="0" max="2" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="6">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 6</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="7">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 7</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="8">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 8</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="9">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 9</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="10">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 10</b></label>
+<span>+3 Stamina</span>
+<input type="number" min="0" max="3" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="11">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 11</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="12">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 12</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="13">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 13</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="14">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 14</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="15">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 15</b></label>
+<span>+2 Stamina</span>
+<input type="number" min="0" max="2" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="16">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 16</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="17">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 17</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="18">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 18</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="19">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 19</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="20">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 20</b></label>
+<span>+3 Stamina</span>
+<input type="number" min="0" max="3" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="21">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 21</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="22">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 22</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="23">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 23</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="24">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 24</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="25">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 25</b></label>
+<span>+2 Stamina</span>
+<input type="number" min="0" max="2" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="26">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 26</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="27">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 27</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="28">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 28</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="29">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 29</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="30">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 30</b></label>
+<span>+3 Stamina</span>
+<input type="number" min="0" max="3" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="31">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 31</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="32">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 32</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="33">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 33</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="34">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 34</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="35">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 35</b></label>
+<span>+2 Stamina</span>
+<input type="number" min="0" max="2" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="36">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 36</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="37">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 37</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="38">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 38</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="39">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 39</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="40">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 40</b></label>
+<span>+3 Stamina</span>
+<input type="number" min="0" max="3" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="41">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 41</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="42">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 42</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="43">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 43</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="44">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 44</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="45">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 45</b></label>
+<span>+2 Stamina</span>
+<input type="number" min="0" max="2" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="46">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 46</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="47">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 47</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="48">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 48</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="49">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 49</b></label>
+<span>+1 Stamina</span>
+<input type="number" min="0" max="1" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div>
+<div class="level" data-level="50">
+<label><input type="checkbox" class="lvlcheck"> <b>Nível 50</b></label>
+<span>+3 Stamina</span>
+<input type="number" min="0" max="3" value="0" class="attr" title="Pontos de Stamina colocados neste nível">
+</div></section>
+
+<section class="card"><h2>Skills e morphs</h2>
+<p>No ESO, muitas skills destravam pelo <b>rank da skill line</b>, e não simplesmente por atingir um nível específico. Marque quando realmente aprender/morfar cada uma.</p><div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Assassin's Blade → Killer's Blade</b></label>
+<small>Assassination</small><p>Execute melee: fica muito forte quando o alvo está com pouca vida e ainda cura ao finalizar.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Teleport Strike → Ambush</b></label>
+<small>Assassination</small><p>Gap closer para entrar em cima do alvo e começar o burst.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Grim Focus → Relentless Focus</b></label>
+<small>Assassination</small><p>Buff ofensivo importante; recompensa ataques leves e gera um disparo espectral forte.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Death Stroke → Incapacitating Strike</b></label>
+<small>Assassination</small><p>Ultimate ofensivo para a janela de burst.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Veiled Strike → Surprise Attack</b></label>
+<small>Shadow</small><p>Seu golpe melee principal: rápido, barato e perfeito para o assassino de adagas.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Shadow Cloak → Shadowy Disguise</b></label>
+<small>Shadow</small><p>Peça central da fantasia: invisibilidade/stealth para reposicionar e preparar ataques.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Path of Darkness → Twisting Path</b></label>
+<small>Shadow</small><p>Mobilidade e dano em área; útil no leveling e em combate.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Strife → Swallow Soul</b></label>
+<small>Siphoning</small><p>Opção de dano + cura durante o leveling; ajuda muito um iniciante.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Siphoning Strikes → Leeching Strikes</b></label>
+<small>Siphoning</small><p>Ajuda a recuperar recursos enquanto ataca.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Twin Slashes → Blood Craze</b></label>
+<small>Dual Wield</small><p>DoT de duas armas com cura; confortável para aprender melee.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Whirlwind → Whirling Blades</b></label>
+<small>Dual Wield</small><p>Dano em área e execute para grupos de inimigos.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Blade Cloak → Deadly Cloak</b></label>
+<small>Dual Wield</small><p>Dano ao redor e defesa contra ataques em área.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Passivos de Assassination/Shadow/Siphoning</b></label>
+<small>Passivos</small><p>Compre conforme abrirem; são parte importante do dano, sustain e sobrevivência.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Passivos de Dual Wield</b></label>
+<small>Passivos</small><p>Pegue conforme tiver pontos; reforçam as duas adagas.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Passivos raciais Dunmer</b></label>
+<small>Racial</small><p>Pegue todos conforme abrirem. Dunmer combina muito bem com personagem ofensivo híbrido.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Vampire: Eviscerate → Blood for Blood</b></label>
+<small>Vampire</small><p>Ataque vampírico melee temático. Use com cuidado porque custa Health.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Vampire: Mist Form → Elusive Mist</b></label>
+<small>Vampire</small><p>Ferramenta de mobilidade/escape vampírico; mais relevante para PvP e sobrevivência.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Vampire: Mesmerize → Hypnosis</b></label>
+<small>Vampire</small><p>Controle temático para situações em que o alvo pode ser afetado.</p></div>
+<div class="skill"><label><input type="checkbox" class="skillcheck"> <b>Vampire: Blood Scion → Swarming Scion</b></label>
+<small>Vampire</small><p>Ultimate de transformação vampírica; excelente para a fantasia do personagem.</p></div></section>
+
+<section class="card"><h2>Marcos do Nefasto</h2>
+<div class="task"><label><input type="checkbox" class="taskcheck"> <b>Equipar duas adagas e começar Dual Wield</b></label><p>Use Dual Wield desde cedo para a linha evoluir junto com o personagem.</p></div>
+<div class="task"><label><input type="checkbox" class="taskcheck"> <b>Treinar as 3 linhas de Nightblade</b></label><p>Mantenha pelo menos uma habilidade de Assassination, Shadow e Siphoning na barra enquanto ganha XP.</p></div>
+<div class="task"><label><input type="checkbox" class="taskcheck"> <b>Nível 10 — liberar Alliance War</b></label><p>Vale fazer o tutorial de Cyrodiil e começar a abrir ferramentas úteis para PvP. Não precisa sair enfrentando veteranos agora.</p></div>
+<div class="task"><label><input type="checkbox" class="taskcheck"> <b>Nível 15 — segunda barra</b></label><p>Para aprender sem complicar, pode usar Dual Wield nas duas barras inicialmente.</p></div>
+<div class="task"><label><input type="checkbox" class="taskcheck"> <b>Contrair Vampirismo</b></label><p>Vampirismo não vem automaticamente com Nightblade. O personagem precisa ser transformado; depois disso a linha Vampire é evoluída separadamente.</p></div>
+<div class="task"><label><input type="checkbox" class="taskcheck"> <b>Não aumentar o estágio de Vampiro sem entender o custo</b></label><p>Os estágios alteram benefícios e penalidades. Para um iniciante, não trate “Stage 4” como obrigatório só porque parece mais vampiro.</p></div>
+<div class="task"><label><input type="checkbox" class="taskcheck"> <b>Treinar montaria diariamente</b></label><p>Comece por Speed.</p></div>
+</section>
+
+<section class="card"><h2>Como jogar o arquétipo</h2>
+<p><b>Fantasia:</b> aproximar-se escondido, escolher um alvo, explodir rapidamente e desaparecer/reposicionar. Nightblade fornece stealth, burst e mobilidade; Vampire acrescenta ferramentas e estética vampíricas.</p>
+<p><b>Importante:</b> “Nightblade Vampiro” não significa encher as duas barras exclusivamente de skills Vampire. As habilidades de Nightblade + Dual Wield continuam sendo a espinha dorsal. Vampirismo entra como complemento e pode mudar conforme PvE ou PvP.</p>
+</section>
+
+<section class="card"><h2>Build didática ao chegar no 50</h2><div class="grid">
+<div class="skill"><b>Barra 1 — duas adagas • assassinato</b><p>Surprise Attack<br>Killer's Blade<br>Ambush<br>Relentless Focus<br>Shadowy Disguise<br><b>ULT:</b> Incapacitating Strike</p></div>
+<div class="skill"><b>Barra 2 — duas adagas • sustain/vampiro</b><p>Blood Craze<br>Deadly Cloak<br>Leeching Strikes<br>Twisting Path / flex<br>skill Vampire flexível<br><b>ULT:</b> Swarming Scion ou flex</p></div></div>
+<p>Essa é uma configuração didática para aprender o personagem, não uma promessa de build meta. Ao chegar no 50, PvE e PvP devem ganhar configurações separadas.</p></section>
+
+<script>
+const KEY="nefasto_nb_vamp_tracker_v1", pts={2:1,3:1,4:1,5:2,6:1,7:1,8:1,9:1,10:3,11:1,12:1,13:1,14:1,15:2,16:1,17:1,18:1,19:1,20:3,21:1,22:1,23:1,24:1,25:2,26:1,27:1,28:1,29:1,30:3,31:1,32:1,33:1,34:1,35:2,36:1,37:1,38:1,39:1,40:3,41:1,42:1,43:1,44:1,45:2,46:1,47:1,48:1,49:1,50:3};
+const inputs=[...document.querySelectorAll("input")];
+function save(){localStorage.setItem(KEY,JSON.stringify(inputs.map(x=>x.type==="checkbox"?x.checked:x.value)));update()}
+function load(){let d=JSON.parse(localStorage.getItem(KEY)||"null");if(d)d.forEach((v,i)=>{if(inputs[i])inputs[i].type==="checkbox"?inputs[i].checked=v:inputs[i].value=v});update()}
+function update(){
+ let done=[...document.querySelectorAll(".lvlcheck")].filter(x=>x.checked).length, lvl=Math.min(50,done+1);
+ let total=[...document.querySelectorAll(".attr")].reduce((a,x)=>a+(+x.value||0),0);
+ let expected=Object.entries(pts).filter(([l])=>+l<=lvl).reduce((a,[,v])=>a+v,0);
+ current.textContent=lvl;document.getElementById("total").textContent=total;document.getElementById("expected").textContent=expected;
+ bar.style.width=((lvl-1)/49*100)+"%";
+ now.innerHTML="<b>O que fazer agora:</b> "+(lvl<10?"Treine Assassination + Shadow + Siphoning + Dual Wield. Duas adagas equipadas sempre que possível.":lvl<15?"Comece a conhecer PvP pelo tutorial de Cyrodiil, mas continue focado em aprender seu Nightblade.":lvl<50?"Use as duas barras, evolua morphs e, quando conseguir Vampirismo, mantenha uma skill Vampire em treinamento quando fizer sentido.":"Nível 50: agora separe uma configuração PvE e outra PvP. Não invista pesado em gear definitivo antes do CP160.");
+ document.querySelectorAll(".skill,.task").forEach(e=>{let c=e.querySelector('input[type=checkbox]');if(c)e.classList.toggle("done",c.checked)})
+}
+inputs.forEach(x=>x.addEventListener("change",save));
+next.onclick=()=>{let x=[...document.querySelectorAll(".lvlcheck")].find(x=>!x.checked);if(x){x.checked=true;save();x.closest(".level").scrollIntoView({behavior:"smooth",block:"center"})}};
+reset.onclick=()=>{if(confirm("Apagar todo o progresso do Nefasto?")){localStorage.removeItem(KEY);location.reload()}};
+load();
+</script></body></html>

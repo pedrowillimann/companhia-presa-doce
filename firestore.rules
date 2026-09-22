@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+ match /databases/{database}/documents {
+  function signedIn() { return request.auth != null; }
+  function admin() { return signedIn() && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin'; }
+  function owner(id) { return signedIn() && get(/databases/$(database)/documents/assignments/$(id)).data.ownerUid == request.auth.uid; }
+  function validUser(d) { return d.keys().hasOnly(['displayName','role','createdAt']) && d.displayName is string && d.displayName.size() > 0 && d.displayName.size() <= 120 && d.role in ['player','admin'] && d.createdAt is timestamp; }
+  match /users/{uid} {
+   allow read: if signedIn() && (request.auth.uid == uid || admin());
+   allow create: if signedIn() && request.auth.uid == uid && validUser(request.resource.data) && request.resource.data.role == 'player' && request.resource.data.createdAt == request.time;
+   allow update: if validUser(request.resource.data) && request.resource.data.createdAt == resource.data.createdAt && ((admin() && (request.auth.uid != uid || request.resource.data.role == resource.data.role)) || (signedIn() && request.auth.uid == uid && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['displayName'])));
+   allow delete: if false;
+  }
+  match /assignments/{id} {
+   allow read: if admin() || (signedIn() && resource.data.ownerUid == request.auth.uid);
+   allow create, update: if admin() && request.resource.data.keys().hasOnly(['ownerUid']) && request.resource.data.ownerUid is string && exists(/databases/$(database)/documents/characters/$(id)) && (request.resource.data.ownerUid == '' || exists(/databases/$(database)/documents/users/$(request.resource.data.ownerUid)));
+   allow delete: if admin();
+  }
+  match /characters/{id} {
+   allow read: if resource.data.public == true || admin() || owner(id);
+   allow create, update: if admin() && request.resource.data.keys().hasOnly(['name','race','class','role','content','weapons','buildId','public','archived']) && request.resource.data.name is string && request.resource.data.name.size() > 0 && request.resource.data.name.size() <= 120 && request.resource.data.race is string && request.resource.data.class is string && request.resource.data.role is string && request.resource.data.content is string && request.resource.data.weapons is string && request.resource.data.buildId is string && request.resource.data.public == true && request.resource.data.archived is bool && getAfter(/databases/$(database)/documents/builds/$(request.resource.data.buildId)).data.characterId == id;
+   allow delete: if false;
+  }
+  match /builds/{id} {
+   allow read: if resource.data.public == true || admin();
+   allow create: if admin() && request.resource.data.keys().hasAll(['characterId','version','attribute','sections','skills','goals','pending','checklistIds','public']) && request.resource.data.characterId is string && request.resource.data.version is int && request.resource.data.version > 0 && request.resource.data.attribute is string && request.resource.data.sections is list && request.resource.data.skills is list && request.resource.data.goals is list && request.resource.data.pending is list && request.resource.data.checklistIds is list && request.resource.data.checklistIds.size() <= 300 && request.resource.data.public == true;
+   // Builds são imutáveis: mudanças geram um novo documento/versionamento.
+   allow update, delete: if false;
+  }
+  match /progress/{id} {
+   function valid() {
+    let d = request.resource.data;
+    let c = get(/databases/$(database)/documents/characters/$(id)).data;
+    let b = get(/databases/$(database)/documents/builds/$(c.buildId)).data;
+    return d.keys().hasOnly(['level','attributes','completed','notes','buildId','public','revision','updatedAt','updatedBy']) && d.level is int && d.level >= 1 && d.level <= 50 && d.attributes is int && d.attributes >= 0 && d.attributes <= 64 && d.completed is list && d.completed.size() <= b.checklistIds.size() && d.completed.toSet().size() == d.completed.size() && d.completed.hasOnly(b.checklistIds) && d.notes is string && d.notes.size() <= 2000 && d.buildId == c.buildId && d.public == c.public && d.updatedAt == request.time && d.updatedBy == request.auth.uid && d.revision is int;
+   }
+   allow read: if resource.data.public == true || admin() || owner(id);
+   allow create: if (admin() || owner(id)) && valid() && request.resource.data.revision == 1;
+   allow update: if (admin() || owner(id)) && valid() && request.resource.data.revision == resource.data.revision + 1;
+   allow delete: if false;
+  }
+  match /{document=**} { allow read, write: if false; }
+ }
+}

@@ -1,0 +1,923 @@
+{
+  "characters": [
+    {
+      "id": "mraaj",
+      "name": "M'Raaj Presa-Doce",
+      "race": "Khajiit",
+      "class": "Templar",
+      "role": "Paladino da Luz · DPS",
+      "content": "Solo / aprendizado",
+      "weapons": "Espada de duas mãos",
+      "buildId": "mraaj-v1",
+      "public": true,
+      "archived": false
+    },
+    {
+      "id": "darzak",
+      "name": "Dar'Zak",
+      "race": "Khajiit",
+      "class": "Nightblade",
+      "role": "Assassino · DPS",
+      "content": "PvP",
+      "weapons": "Duas adagas",
+      "buildId": "darzak-v1",
+      "public": true,
+      "archived": false
+    },
+    {
+      "id": "krazir",
+      "name": "Kra'zir",
+      "race": "Khajiit",
+      "class": "Warden",
+      "role": "Arqueiro / Healer",
+      "content": "PvE",
+      "weapons": "Arco",
+      "buildId": "krazir-v1",
+      "public": true,
+      "archived": false
+    },
+    {
+      "id": "broschita",
+      "name": "Bro'Schita",
+      "race": "Khajiit",
+      "class": "Dragonknight",
+      "role": "Tank",
+      "content": "PvE",
+      "weapons": "Espada e escudo",
+      "buildId": "broschita-v1",
+      "public": true,
+      "archived": false
+    },
+    {
+      "id": "nefasto",
+      "name": "Nefasto",
+      "race": "Dunmer",
+      "class": "Nightblade",
+      "role": "Vampiro Assassino",
+      "content": "PvE + caminho para PvP",
+      "weapons": "Duas adagas",
+      "buildId": "nefasto-v1",
+      "public": true,
+      "archived": false
+    }
+  ],
+  "builds": [
+    {
+      "id": "mraaj-v1",
+      "characterId": "mraaj",
+      "version": 1,
+      "source": "MRaaj_Presa_Doce_Templar_Tracker.html",
+      "sourceSha256": "fe349fbcc12cdfde311ed63e8e2155ad7b707d1db7311a1ad20ee2896741d7f4",
+      "attribute": "Stamina",
+      "sections": [
+        {
+          "title": "Orientações da ficha original",
+          "html": "<div class=\"skill\">Mantenha pelo menos uma skill de <b>Aedric Spear</b>, uma de <b>Dawn’s Wrath</b>, uma de <b>Restoring Light</b> e uma de <b>Two-Handed</b> sendo treinadas.</div>\n<div class=\"skill\"><strong>Prioridade:</strong> faça o tutorial de Cyrodiil para começar Assault e buscar Vigor.</div>\n<div class=\"skill\"><strong>Prioridade:</strong> configure sua segunda barra de arma.</div>"
+        },
+        {
+          "title": "Atributos",
+          "html": "<div><b>Plano desta build:</b> coloque todos os pontos de atributo em <b>Stamina</b>. Alguns níveis dão mais de 1 ponto; o tracker calcula isso.</div><div></div><div></div>"
+        },
+        {
+          "title": "Build-alvo ao chegar no 50",
+          "html": "<div><div><b>Barra 1 — Greatsword</b><p>Biting Jabs<br/>Power of the Light<br/>Radiant Glory<br/>Repentance<br/>Ritual of Retribution<br/><b>ULT:</b> Everlasting Sweep</p></div><div><b>Barra 2 — Greatsword</b><p>Stampede<br/>Carve<br/>Solar Barrage<br/>Restoring Focus<br/>Resolving Vigor<br/><b>ULT:</b> flexível</p></div></div><p>Esta é uma configuração de aprendizado/solo e não uma promessa de setup meta universal. PvP e PvE serão separados depois no Armory.</p>"
+        }
+      ],
+      "skills": [
+        {
+          "id": "jabs",
+          "name": "Puncturing Strikes → Biting Jabs",
+          "line": "Aedric Spear",
+          "why": "Seu ataque principal melee. Quando Puncturing Strikes chegar ao Rank IV, escolha Biting Jabs."
+        },
+        {
+          "id": "sun",
+          "name": "Sun Fire",
+          "line": "Dawn's Wrath",
+          "why": "Use cedo para manter a linha Dawn’s Wrath ganhando experiência."
+        },
+        {
+          "id": "heal",
+          "name": "Rushed Ceremony",
+          "line": "Restoring Light",
+          "why": "Cura inicial e, principalmente, ajuda a evoluir Restoring Light."
+        },
+        {
+          "id": "charge",
+          "name": "Critical Charge → Stampede",
+          "line": "Two-Handed",
+          "why": "Gap closer + área de dano. Evolua usando arma Two-Handed."
+        },
+        {
+          "id": "cleave",
+          "name": "Cleave → Carve",
+          "line": "Two-Handed",
+          "why": "DoT/pressão em área e parte da barra secundária."
+        },
+        {
+          "id": "aura",
+          "name": "Restoring Aura → Repentance",
+          "line": "Restoring Light",
+          "why": "Sustain e recuperação; útil durante questing."
+        },
+        {
+          "id": "sweep",
+          "name": "Radial Sweep → Everlasting Sweep",
+          "line": "Aedric Spear",
+          "why": "Ultimate ofensivo temático e barato."
+        },
+        {
+          "id": "potl",
+          "name": "Backlash → Power of the Light",
+          "line": "Dawn's Wrath",
+          "why": "Marca luminosa de Stamina que explode após acumular dano."
+        },
+        {
+          "id": "solar",
+          "name": "Solar Flare → Solar Barrage",
+          "line": "Dawn's Wrath",
+          "why": "Buff/área solar para complementar seu dano."
+        },
+        {
+          "id": "vigor",
+          "name": "Vigor → Resolving Vigor",
+          "line": "Assault",
+          "why": "Sua cura de Stamina. Abra Assault pelo tutorial de Cyrodiil."
+        },
+        {
+          "id": "ritual",
+          "name": "Cleansing Ritual → Ritual of Retribution",
+          "line": "Restoring Light",
+          "why": "Limpeza de efeitos e área ofensiva."
+        },
+        {
+          "id": "focus",
+          "name": "Rune Focus → Restoring Focus",
+          "line": "Restoring Light",
+          "why": "Defesa, cura e recuperação de Stamina; o morph exige Rune Focus Rank IV e a linha avançada."
+        },
+        {
+          "id": "radiant",
+          "name": "Radiant Destruction → Radiant Glory",
+          "line": "Dawn's Wrath",
+          "why": "Execute de longa distância quando o alvo estiver com pouca vida."
+        }
+      ],
+      "goals": [
+        {
+          "id": "goal-1",
+          "name": "Nível 10 — Cyrodiil",
+          "line": "Objetivo",
+          "why": "Faça o tutorial para abrir Assault/Support. Objetivo: chegar em Vigor → Resolving Vigor."
+        },
+        {
+          "id": "goal-2",
+          "name": "Nível 15 — segunda barra",
+          "line": "Objetivo",
+          "why": "Libera Weapon Swap. Pode manter Two-Handed nas duas barras enquanto aprende."
+        },
+        {
+          "id": "goal-3",
+          "name": "Armadura",
+          "line": "Objetivo",
+          "why": "Priorize Medium para desempenho. Use Outfit pesado branco/dourado para manter o visual de paladino."
+        },
+        {
+          "id": "goal-4",
+          "name": "Montaria",
+          "line": "Objetivo",
+          "why": "Treine diariamente; para começar, priorize Speed."
+        }
+      ],
+      "pending": [
+        "Mundus",
+        "Alimentação",
+        "Sets e equipamento definitivo",
+        "Champion Points"
+      ],
+      "checklistIds": [
+        "jabs",
+        "sun",
+        "heal",
+        "charge",
+        "cleave",
+        "aura",
+        "sweep",
+        "potl",
+        "solar",
+        "vigor",
+        "ritual",
+        "focus",
+        "radiant",
+        "goal-1",
+        "goal-2",
+        "goal-3",
+        "goal-4"
+      ]
+    },
+    {
+      "id": "darzak-v1",
+      "characterId": "darzak",
+      "version": 1,
+      "source": "DarZak_Nightblade_Assassino_PvP_Tracker.html",
+      "sourceSha256": "d8552a37754e5232841593069c078803320736dece126b3f9680d974cc81c138",
+      "attribute": "Stamina",
+      "sections": [
+        {
+          "title": "Orientações da ficha original",
+          "html": "<div class=\"skill\">Mantenha pelo menos uma skill de <b>Assassination</b>, uma de <b>Shadow</b>, uma de <b>Siphoning</b> e uma de <b>Dual Wield</b> sendo treinadas.</div>\n<div class=\"skill\"><strong>Prioridade:</strong> faça o tutorial de Cyrodiil para começar Assault e buscar Vigor.</div>\n<div class=\"skill\"><strong>Prioridade:</strong> configure sua segunda barra. Deixe as <b>duas adagas</b> na barra ofensiva e use a segunda para defesa/sustain enquanto aprende.</div>"
+        },
+        {
+          "title": "Atributos",
+          "html": "<div><b>Plano de leveling:</b> coloque os pontos em <b>Stamina</b> enquanto aprende o personagem. Ao chegar no 50 e montar o PvP definitivo, você poderá redistribuir parte para Health se precisar de mais sobrevivência. O tracker calcula os pontos ganhos por nível.</div><div></div><div></div>"
+        },
+        {
+          "title": "Build-alvo ao chegar no 50",
+          "html": "<div><div><b>Barra 1 — Dual Wield (duas adagas)</b><p>Surprise Attack<br/>Killer's Blade<br/>Relentless Focus<br/>Whirling Blades<br/>Shadowy Disguise<br/><b>ULT:</b> Incapacitating Strike</p></div><div><b>Barra 2 — flexível / defensiva</b><p>Resolving Vigor<br/>Siphoning Attacks<br/>Dark Shade<br/>Healthy Offering ou flex<br/>Shadowy Disguise / flex<br/><b>ULT:</b> defensivo ou flexível</p></div></div><p>Objetivo: assassino PvP iniciante. A barra final muda conforme o modo de PvP, equipamentos e preferência. Dual Wield permanece como identidade ofensiva do personagem.</p>"
+        }
+      ],
+      "skills": [
+        {
+          "id": "surprise",
+          "name": "Veiled Strike → Surprise Attack",
+          "line": "Assassination",
+          "why": "Seu golpe melee principal. O morph usa Stamina, causa Physical Damage e recompensa atacar pelo flanco."
+        },
+        {
+          "id": "killers",
+          "name": "Assassin’s Blade → Killer's Blade",
+          "line": "Assassination",
+          "why": "Seu execute: use para finalizar alvos com pouca vida."
+        },
+        {
+          "id": "cloak",
+          "name": "Shadow Cloak → Shadowy Disguise",
+          "line": "Shadow",
+          "why": "A ferramenta central da fantasia de assassino: invisibilidade para reposicionar e preparar burst."
+        },
+        {
+          "id": "siphon",
+          "name": "Siphoning Strikes → Siphoning Attacks",
+          "line": "Siphoning",
+          "why": "Ajuda no sustain durante lutas e mantém a linha Siphoning evoluindo."
+        },
+        {
+          "id": "flurry",
+          "name": "Flurry",
+          "line": "Dual Wield",
+          "why": "Skill inicial para fazer Dual Wield ganhar ranks enquanto você libera opções melhores."
+        },
+        {
+          "id": "whirl",
+          "name": "Whirlwind → Whirling Blades",
+          "line": "Dual Wield",
+          "why": "Dano em área e execute de Stamina; combina bem com duas adagas."
+        },
+        {
+          "id": "cloakdw",
+          "name": "Blade Cloak → Deadly Cloak",
+          "line": "Dual Wield",
+          "why": "Ferramenta útil de dano/defesa para evoluir a linha de duas armas."
+        },
+        {
+          "id": "relentless",
+          "name": "Grim Focus → Relentless Focus",
+          "line": "Assassination",
+          "why": "Acumule stacks com ataques e use a flecha espectral como parte do burst."
+        },
+        {
+          "id": "incap",
+          "name": "Death Stroke → Incapacitating Strike",
+          "line": "Assassination",
+          "why": "Ultimate ofensivo para abrir a janela de burst contra outro jogador."
+        },
+        {
+          "id": "shade",
+          "name": "Summon Shade → Dark Shade",
+          "line": "Shadow",
+          "why": "Pressão e utilidade; também ajuda a manter Shadow evoluindo."
+        },
+        {
+          "id": "vigor",
+          "name": "Vigor → Resolving Vigor",
+          "line": "Assault",
+          "why": "Cura essencial para aprender PvP. Abra Assault pelo tutorial de Cyrodiil no nível 10."
+        },
+        {
+          "id": "healthy",
+          "name": "Malevolent Offering → Healthy Offering",
+          "line": "Siphoning",
+          "why": "Cura adicional forte para situações defensivas; use com consciência do custo/efeito."
+        },
+        {
+          "id": "passives",
+          "name": "Passivos de Assassination + Dual Wield + Medium Armor",
+          "line": "Passivos",
+          "why": "Depois das skills essenciais, invista nos passivos ofensivos, sustain e mobilidade dessas linhas."
+        }
+      ],
+      "goals": [
+        {
+          "id": "goal-1",
+          "name": "Nível 10 — Cyrodiil",
+          "line": "Objetivo",
+          "why": "Faça o tutorial para abrir Assault/Support. Objetivo: Vigor → Resolving Vigor para ter uma cura confiável no PvP."
+        },
+        {
+          "id": "goal-2",
+          "name": "Nível 15 — segunda barra",
+          "line": "Objetivo",
+          "why": "Libera Weapon Swap. Mantenha Dual Wield na frente; a segunda barra fica flexível enquanto aprende."
+        },
+        {
+          "id": "goal-3",
+          "name": "Armadura",
+          "line": "Objetivo",
+          "why": "Priorize Medium Armor para o assassino. Evolua também algumas peças Heavy/Light quando for conveniente para liberar as linhas."
+        },
+        {
+          "id": "goal-4",
+          "name": "Montaria",
+          "line": "Objetivo",
+          "why": "Treine diariamente; para começar, priorize Speed."
+        }
+      ],
+      "pending": [
+        "Mundus",
+        "Alimentação",
+        "Sets e equipamento definitivo",
+        "Champion Points"
+      ],
+      "checklistIds": [
+        "surprise",
+        "killers",
+        "cloak",
+        "siphon",
+        "flurry",
+        "whirl",
+        "cloakdw",
+        "relentless",
+        "incap",
+        "shade",
+        "vigor",
+        "healthy",
+        "passives",
+        "goal-1",
+        "goal-2",
+        "goal-3",
+        "goal-4"
+      ]
+    },
+    {
+      "id": "krazir-v1",
+      "characterId": "krazir",
+      "version": 1,
+      "source": "Krazir_Warden_Arqueiro_Healer_PvE_Tracker.html",
+      "sourceSha256": "6f8ea942712de7fae4cbcd63b82baf15e31c10660aa8d31252defd1cfb83775e",
+      "attribute": "Magicka",
+      "sections": [
+        {
+          "title": "Orientações da ficha original",
+          "html": "<div class=\"skill\">Mantenha na barra pelo menos uma skill de <b>Green Balance</b>, uma de <b>Animal Companions</b>, uma de <b>Winter's Embrace</b> e uma de <b>Bow</b>. Assim as quatro linhas evoluem enquanto você ganha XP.</div>\n<div class=\"skill\"><strong>Prioridade:</strong> use o Dungeon Finder para começar a praticar cura em grupo. Sua função é manter curas/buffs ativos, não tentar competir no dano.</div>\n<div class=\"skill\"><strong>Prioridade:</strong> configure a segunda barra. Pode manter <b>Bow nas duas barras</b> durante o leveling para preservar o conceito de arqueiro-healer.</div>"
+        },
+        {
+          "title": "Atributos",
+          "html": "<div><b>Plano de leveling:</b> coloque os pontos em <b>Magicka</b>. O Warden cura principalmente com Green Balance, então Magicka deixa o primeiro healer mais simples e confiável. O arco continua sendo sua arma temática e de dano/utilidade; você não precisa virar DPS de Stamina para usar Bow.</div><div></div><div></div>"
+        },
+        {
+          "title": "Build-alvo ao chegar no 50",
+          "html": "\n<div>\n<div><b>Barra 1 — Bow • cura/suporte</b><p>Enchanted Growth<br/>Budding Seeds<br/>Green Lotus<br/>Living Trellis<br/>Betty Netch<br/><b>ULT:</b> Enchanted Forest</p></div>\n<div><b>Barra 2 — Bow • dano/utilidade</b><p>Endless Hail<br/>Lethal Arrow ou flex<br/>Expansive Frost Cloak<br/>Green Lotus ou flex<br/>skill flexível<br/><b>ULT:</b> flexível</p></div>\n</div>\n<p>Esta é uma build de aprendizado e fantasia Bow Healer, não uma configuração de trial otimizada. Para dungeons normais e progressão casual, o objetivo é aprender cura, buffs e posicionamento mantendo o arco. Em conteúdo PvE mais exigente, podemos converter uma barra para Restoration Staff sem apagar a identidade de arqueiro.</p>\n"
+        }
+      ],
+      "skills": [
+        {
+          "id": "fungal",
+          "name": "Fungal Growth → Enchanted Growth",
+          "line": "Green Balance",
+          "why": "Sua cura frontal básica. O morph também melhora a recuperação de Magicka e Stamina dos aliados."
+        },
+        {
+          "id": "seed",
+          "name": "Healing Seed → Budding Seeds",
+          "line": "Green Balance",
+          "why": "Cria uma área de cura; Budding Seeds cura enquanto cresce e pode ser ativada novamente para florescer antes."
+        },
+        {
+          "id": "lotus",
+          "name": "Lotus Flower → Green Lotus",
+          "line": "Green Balance",
+          "why": "Faz seus ataques leves e pesados curarem aliados próximos. Combina diretamente com a fantasia de arqueiro-healer."
+        },
+        {
+          "id": "forest",
+          "name": "Secluded Grove → Enchanted Forest",
+          "line": "Green Balance",
+          "why": "Ultimate de cura para salvar o grupo quando a vida despenca."
+        },
+        {
+          "id": "trellis",
+          "name": "Living Vines → Living Trellis",
+          "line": "Green Balance",
+          "why": "Cura preventiva em um aliado que está recebendo dano."
+        },
+        {
+          "id": "betty",
+          "name": "Betty Netch",
+          "line": "Animal Companions",
+          "why": "Ajuda no sustain e mantém Animal Companions evoluindo; ótimo suporte para um Warden."
+        },
+        {
+          "id": "cloak",
+          "name": "Frost Cloak → Expansive Frost Cloak",
+          "line": "Winter's Embrace",
+          "why": "Buff defensivo para você e o grupo; mantém Winter’s Embrace evoluindo."
+        },
+        {
+          "id": "volley",
+          "name": "Volley → Endless Hail",
+          "line": "Bow",
+          "why": "Dano de área à distância enquanto você mantém suas curas e buffs ativos."
+        },
+        {
+          "id": "arrow",
+          "name": "Snipe → Lethal Arrow",
+          "line": "Bow",
+          "why": "Ataque de arco para questing/solo. Não é sua prioridade durante cura de grupo, mas mantém a identidade de arqueiro."
+        },
+        {
+          "id": "passivegreen",
+          "name": "Passivos de Green Balance",
+          "line": "Passivos",
+          "why": "Priorize Accelerated Growth, Nature’s Gift, Emerald Moss e Maturation conforme forem abrindo."
+        },
+        {
+          "id": "passivebow",
+          "name": "Passivos de Bow",
+          "line": "Passivos",
+          "why": "Pegue os passivos do arco conforme sobrar ponto para melhorar seu lado arqueiro."
+        },
+        {
+          "id": "racial",
+          "name": "Passivos raciais Khajiit",
+          "line": "Racial",
+          "why": "Compre os passivos raciais conforme forem abrindo; Khajiit funciona normalmente como Warden healer."
+        }
+      ],
+      "goals": [
+        {
+          "id": "goal-1",
+          "name": "Nível 10 — primeira prática de healer",
+          "line": "Objetivo",
+          "why": "Entre em dungeons normais pelo Dungeon Finder quando se sentir confortável. Mantenha o grupo vivo e aprenda posicionamento; não precisa decorar rotação."
+        },
+        {
+          "id": "goal-2",
+          "name": "Nível 15 — segunda barra",
+          "line": "Objetivo",
+          "why": "Libera Weapon Swap. Para este conceito, Bow/Bow é perfeitamente válido durante o leveling: uma barra de cura/suporte e outra de arco/dano/utilidade."
+        },
+        {
+          "id": "goal-3",
+          "name": "Armadura",
+          "line": "Objetivo",
+          "why": "Priorize Light Armor para sustain de Magicka e cura. Pode usar 5 Light + 1 Medium + 1 Heavy quando tiver as linhas liberadas."
+        },
+        {
+          "id": "goal-4",
+          "name": "Montaria",
+          "line": "Objetivo",
+          "why": "Treine diariamente; para começar, priorize Speed."
+        },
+        {
+          "id": "goal-5",
+          "name": "Regra do arqueiro-healer",
+          "line": "Objetivo",
+          "why": "O arco é parte da identidade e ajuda no dano/questing, mas suas skills de Green Balance são o núcleo da cura. Se futuramente quiser healer de conteúdo mais exigente, vale testar Restoration Staff em uma das barras."
+        }
+      ],
+      "pending": [
+        "Mundus",
+        "Alimentação",
+        "Sets e equipamento definitivo",
+        "Champion Points"
+      ],
+      "checklistIds": [
+        "fungal",
+        "seed",
+        "lotus",
+        "forest",
+        "trellis",
+        "betty",
+        "cloak",
+        "volley",
+        "arrow",
+        "passivegreen",
+        "passivebow",
+        "racial",
+        "goal-1",
+        "goal-2",
+        "goal-3",
+        "goal-4",
+        "goal-5"
+      ]
+    },
+    {
+      "id": "broschita-v1",
+      "characterId": "broschita",
+      "version": 1,
+      "source": "BroSchita_Dragonknight_Tank_PvE_Tracker.html",
+      "sourceSha256": "966d9ab113291b6bec8afc3f889cd0a5093e71b121e1ebaab3932d8c331fe392",
+      "attribute": "Health",
+      "sections": [
+        {
+          "title": "Orientações da ficha original",
+          "html": "<p>Comece equipando espada + escudo. Assim que Puncture aparecer, pegue a habilidade.</p>"
+        },
+        {
+          "title": "Atributos nível por nível",
+          "html": "\n<p>Para este primeiro Tank, o plano simples é colocar <b>todos os pontos de atributo em Health durante o 1–50</b>. Depois vocês podem redistribuir quando ele já entender sustain, block e equipamento.</p>\n<p>Marque o nível quando subir e registre quantos pontos realmente colocou em Health.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        },
+        {
+          "title": "O que um Tank faz?",
+          "html": "\n<p><b>1. Taunt:</b> mantém o boss focado em você.<br/>\n<b>2. Posicionamento:</b> controla para onde o boss olha e onde a luta acontece.<br/>\n<b>3. Sobrevivência:</b> usa block, resistências, cura e gerenciamento de recursos.<br/>\n<b>4. Controle:</b> puxa e prende inimigos para o grupo matar mais rápido.<br/>\n<b>5. Suporte:</b> aplica debuffs e ajuda o grupo. Tank no ESO não é só acumular vida.</p>\n"
+        },
+        {
+          "title": "Build didática ao chegar no 50",
+          "html": "\n<div>\n<div><b>Barra 1 — Sword &amp; Shield • Boss</b><p>Pierce Armor<br/>Heroic Slash<br/>Hardened Armor<br/>Coagulating Blood<br/>Igneous Shield<br/><b>ULT:</b> Magma Shell</p></div>\n<div><b>Barra 2 — Sword &amp; Shield • Controle</b><p>Unrelenting Grip<br/>Choking Talons<br/>Defensive Stance<br/>Igneous Shield / flex<br/>skill flexível<br/><b>ULT:</b> flexível</p></div>\n</div>\n<p><b>Loop mental:</b> Hardened Armor → taunt no boss → virar boss para longe do grupo → Heroic Slash → bloquear ataques pesados → puxar inimigos espalhados → Talons nos grupos → cura/escudo quando necessário.</p>\n<p>É uma configuração para aprender Tank em PvE normal. Depois do 50 vocês podem montar uma configuração específica para dungeons difíceis/trials.</p>\n"
+        }
+      ],
+      "skills": [
+        {
+          "id": "skill-1",
+          "name": "Puncture → Pierce Armor",
+          "line": "One Hand and Shield",
+          "why": "PRIORIDADE MÁXIMA. Seu taunt principal: mantém o boss em você e reduz as resistências dele."
+        },
+        {
+          "id": "skill-2",
+          "name": "Low Slash → Heroic Slash",
+          "line": "One Hand and Shield",
+          "why": "Reduz o dano do inimigo e ajuda a gerar Ultimate."
+        },
+        {
+          "id": "skill-3",
+          "name": "Defensive Posture → Defensive Stance",
+          "line": "One Hand and Shield",
+          "why": "Ferramenta defensiva para sobreviver enquanto aprende block."
+        },
+        {
+          "id": "skill-4",
+          "name": "Fiery Grip → Unrelenting Grip",
+          "line": "Ardent Flame",
+          "why": "Puxa inimigos distantes para perto, facilitando o dano em área do grupo."
+        },
+        {
+          "id": "skill-5",
+          "name": "Spiked Armor → Hardened Armor",
+          "line": "Draconic Power",
+          "why": "Seu buff de resistência. Mantenha ativo nas lutas."
+        },
+        {
+          "id": "skill-6",
+          "name": "Dragon Blood → Coagulating Blood",
+          "line": "Draconic Power",
+          "why": "Cura própria de emergência."
+        },
+        {
+          "id": "skill-7",
+          "name": "Dark Talons → Choking Talons",
+          "line": "Draconic Power",
+          "why": "Prende inimigos ao redor e ajuda a controlar grupos."
+        },
+        {
+          "id": "skill-8",
+          "name": "Obsidian Shield → Igneous Shield",
+          "line": "Earthen Heart",
+          "why": "Escudo para você e aliados; também evolui Earthen Heart."
+        },
+        {
+          "id": "skill-9",
+          "name": "Petrify → Fossilize",
+          "line": "Earthen Heart",
+          "why": "Controle de alvo para inimigos que podem ser imobilizados."
+        },
+        {
+          "id": "skill-10",
+          "name": "Magma Armor → Magma Shell",
+          "line": "Earthen Heart",
+          "why": "Ultimate defensivo para situações de emergência."
+        },
+        {
+          "id": "skill-11",
+          "name": "Passivos de One Hand and Shield",
+          "line": "Passivos",
+          "why": "Priorize os passivos conforme forem desbloqueados."
+        },
+        {
+          "id": "skill-12",
+          "name": "Passivos de Heavy Armor",
+          "line": "Passivos",
+          "why": "Compre conforme tiver pontos disponíveis."
+        },
+        {
+          "id": "skill-13",
+          "name": "Passivos de Dragonknight",
+          "line": "Passivos",
+          "why": "Invista nas três linhas da classe conforme forem abrindo."
+        },
+        {
+          "id": "skill-14",
+          "name": "Passivos raciais Khajiit",
+          "line": "Racial",
+          "why": "Pegue os passivos raciais conforme forem desbloqueados."
+        }
+      ],
+      "goals": [
+        {
+          "id": "goal-1",
+          "name": "Antes da primeira dungeon: aprender TAUNT",
+          "line": "Objetivo",
+          "why": "Puncture/Pierce Armor é obrigatório para entrar como Tank. Use no boss e em inimigos prioritários."
+        },
+        {
+          "id": "goal-2",
+          "name": "Nível 10: primeira dungeon normal",
+          "line": "Objetivo",
+          "why": "Taunte o boss, vire-o para longe do grupo e bloqueie ataques pesados."
+        },
+        {
+          "id": "goal-3",
+          "name": "Nível 15: segunda barra",
+          "line": "Objetivo",
+          "why": "Para aprender sem complicação, Sword & Shield nas duas barras funciona durante o leveling."
+        },
+        {
+          "id": "goal-4",
+          "name": "Aprender Block",
+          "line": "Objetivo",
+          "why": "Não fique segurando block 100% do tempo. Bloqueie golpes perigosos e solte quando estiver seguro para administrar recursos."
+        },
+        {
+          "id": "goal-5",
+          "name": "Aprender posicionamento",
+          "line": "Objetivo",
+          "why": "Boss em você, costas dele para DPS/healer. Evite correr em círculos."
+        },
+        {
+          "id": "goal-6",
+          "name": "Heavy Armor",
+          "line": "Objetivo",
+          "why": "Prioridade em Heavy. Mais tarde, 5 Heavy + 1 Medium + 1 Light é útil para desenvolver linhas e passivos."
+        }
+      ],
+      "pending": [
+        "Mundus",
+        "Alimentação",
+        "Sets e equipamento definitivo",
+        "Champion Points"
+      ],
+      "checklistIds": [
+        "skill-1",
+        "skill-2",
+        "skill-3",
+        "skill-4",
+        "skill-5",
+        "skill-6",
+        "skill-7",
+        "skill-8",
+        "skill-9",
+        "skill-10",
+        "skill-11",
+        "skill-12",
+        "skill-13",
+        "skill-14",
+        "goal-1",
+        "goal-2",
+        "goal-3",
+        "goal-4",
+        "goal-5",
+        "goal-6"
+      ]
+    },
+    {
+      "id": "nefasto-v1",
+      "characterId": "nefasto",
+      "version": 1,
+      "source": "Nefasto_Nightblade_Vampiro_Assassino_Tracker.html",
+      "sourceSha256": "bfb1faf54e9f367aee28a96854dcc94d57e776782dcfd8a9212de853a34dbb25",
+      "attribute": "Stamina",
+      "sections": [
+        {
+          "title": "Orientações da ficha original",
+          "html": "<p>Treine Assassination + Shadow + Siphoning + Dual Wield. Duas adagas equipadas sempre que possível.</p>\n<p>Comece a conhecer PvP pelo tutorial de Cyrodiil, mas continue focado em aprender seu Nightblade.</p>\n<p>Use as duas barras, evolua morphs e, quando conseguir Vampirismo, mantenha uma skill Vampire em treinamento quando fizer sentido.</p>\n<p>Nível 50: agora separe uma configuração PvE e outra PvP. Não invista pesado em gear definitivo antes do CP160.</p>"
+        },
+        {
+          "title": "Atributos nível por nível",
+          "html": "\n<p>Para deixar o primeiro personagem simples, coloque os pontos em <b>Stamina</b> durante o leveling. O objetivo é um assassino melee de duas adagas. Depois do 50, a distribuição pode ser ajustada para a build PvP/PvE definitiva.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        },
+        {
+          "title": "Como jogar o arquétipo",
+          "html": "\n<p><b>Fantasia:</b> aproximar-se escondido, escolher um alvo, explodir rapidamente e desaparecer/reposicionar. Nightblade fornece stealth, burst e mobilidade; Vampire acrescenta ferramentas e estética vampíricas.</p>\n<p><b>Importante:</b> “Nightblade Vampiro” não significa encher as duas barras exclusivamente de skills Vampire. As habilidades de Nightblade + Dual Wield continuam sendo a espinha dorsal. Vampirismo entra como complemento e pode mudar conforme PvE ou PvP.</p>\n"
+        },
+        {
+          "title": "Build didática ao chegar no 50",
+          "html": "<div>\n<div><b>Barra 1 — duas adagas • assassinato</b><p>Surprise Attack<br/>Killer's Blade<br/>Ambush<br/>Relentless Focus<br/>Shadowy Disguise<br/><b>ULT:</b> Incapacitating Strike</p></div>\n<div><b>Barra 2 — duas adagas • sustain/vampiro</b><p>Blood Craze<br/>Deadly Cloak<br/>Leeching Strikes<br/>Twisting Path / flex<br/>skill Vampire flexível<br/><b>ULT:</b> Swarming Scion ou flex</p></div></div>\n<p>Essa é uma configuração didática para aprender o personagem, não uma promessa de build meta. Ao chegar no 50, PvE e PvP devem ganhar configurações separadas.</p>"
+        }
+      ],
+      "skills": [
+        {
+          "id": "skill-1",
+          "name": "Assassin's Blade → Killer's Blade",
+          "line": "Assassination",
+          "why": "Execute melee: fica muito forte quando o alvo está com pouca vida e ainda cura ao finalizar."
+        },
+        {
+          "id": "skill-2",
+          "name": "Teleport Strike → Ambush",
+          "line": "Assassination",
+          "why": "Gap closer para entrar em cima do alvo e começar o burst."
+        },
+        {
+          "id": "skill-3",
+          "name": "Grim Focus → Relentless Focus",
+          "line": "Assassination",
+          "why": "Buff ofensivo importante; recompensa ataques leves e gera um disparo espectral forte."
+        },
+        {
+          "id": "skill-4",
+          "name": "Death Stroke → Incapacitating Strike",
+          "line": "Assassination",
+          "why": "Ultimate ofensivo para a janela de burst."
+        },
+        {
+          "id": "skill-5",
+          "name": "Veiled Strike → Surprise Attack",
+          "line": "Shadow",
+          "why": "Seu golpe melee principal: rápido, barato e perfeito para o assassino de adagas."
+        },
+        {
+          "id": "skill-6",
+          "name": "Shadow Cloak → Shadowy Disguise",
+          "line": "Shadow",
+          "why": "Peça central da fantasia: invisibilidade/stealth para reposicionar e preparar ataques."
+        },
+        {
+          "id": "skill-7",
+          "name": "Path of Darkness → Twisting Path",
+          "line": "Shadow",
+          "why": "Mobilidade e dano em área; útil no leveling e em combate."
+        },
+        {
+          "id": "skill-8",
+          "name": "Strife → Swallow Soul",
+          "line": "Siphoning",
+          "why": "Opção de dano + cura durante o leveling; ajuda muito um iniciante."
+        },
+        {
+          "id": "skill-9",
+          "name": "Siphoning Strikes → Leeching Strikes",
+          "line": "Siphoning",
+          "why": "Ajuda a recuperar recursos enquanto ataca."
+        },
+        {
+          "id": "skill-10",
+          "name": "Twin Slashes → Blood Craze",
+          "line": "Dual Wield",
+          "why": "DoT de duas armas com cura; confortável para aprender melee."
+        },
+        {
+          "id": "skill-11",
+          "name": "Whirlwind → Whirling Blades",
+          "line": "Dual Wield",
+          "why": "Dano em área e execute para grupos de inimigos."
+        },
+        {
+          "id": "skill-12",
+          "name": "Blade Cloak → Deadly Cloak",
+          "line": "Dual Wield",
+          "why": "Dano ao redor e defesa contra ataques em área."
+        },
+        {
+          "id": "skill-13",
+          "name": "Passivos de Assassination/Shadow/Siphoning",
+          "line": "Passivos",
+          "why": "Compre conforme abrirem; são parte importante do dano, sustain e sobrevivência."
+        },
+        {
+          "id": "skill-14",
+          "name": "Passivos de Dual Wield",
+          "line": "Passivos",
+          "why": "Pegue conforme tiver pontos; reforçam as duas adagas."
+        },
+        {
+          "id": "skill-15",
+          "name": "Passivos raciais Dunmer",
+          "line": "Racial",
+          "why": "Pegue todos conforme abrirem. Dunmer combina muito bem com personagem ofensivo híbrido."
+        },
+        {
+          "id": "skill-16",
+          "name": "Vampire: Eviscerate → Blood for Blood",
+          "line": "Vampire",
+          "why": "Ataque vampírico melee temático. Use com cuidado porque custa Health."
+        },
+        {
+          "id": "skill-17",
+          "name": "Vampire: Mist Form → Elusive Mist",
+          "line": "Vampire",
+          "why": "Ferramenta de mobilidade/escape vampírico; mais relevante para PvP e sobrevivência."
+        },
+        {
+          "id": "skill-18",
+          "name": "Vampire: Mesmerize → Hypnosis",
+          "line": "Vampire",
+          "why": "Controle temático para situações em que o alvo pode ser afetado."
+        },
+        {
+          "id": "skill-19",
+          "name": "Vampire: Blood Scion → Swarming Scion",
+          "line": "Vampire",
+          "why": "Ultimate de transformação vampírica; excelente para a fantasia do personagem."
+        }
+      ],
+      "goals": [
+        {
+          "id": "goal-1",
+          "name": "Equipar duas adagas e começar Dual Wield",
+          "line": "Objetivo",
+          "why": "Use Dual Wield desde cedo para a linha evoluir junto com o personagem."
+        },
+        {
+          "id": "goal-2",
+          "name": "Treinar as 3 linhas de Nightblade",
+          "line": "Objetivo",
+          "why": "Mantenha pelo menos uma habilidade de Assassination, Shadow e Siphoning na barra enquanto ganha XP."
+        },
+        {
+          "id": "goal-3",
+          "name": "Nível 10 — liberar Alliance War",
+          "line": "Objetivo",
+          "why": "Vale fazer o tutorial de Cyrodiil e começar a abrir ferramentas úteis para PvP. Não precisa sair enfrentando veteranos agora."
+        },
+        {
+          "id": "goal-4",
+          "name": "Nível 15 — segunda barra",
+          "line": "Objetivo",
+          "why": "Para aprender sem complicar, pode usar Dual Wield nas duas barras inicialmente."
+        },
+        {
+          "id": "goal-5",
+          "name": "Contrair Vampirismo",
+          "line": "Objetivo",
+          "why": "Vampirismo não vem automaticamente com Nightblade. O personagem precisa ser transformado; depois disso a linha Vampire é evoluída separadamente."
+        },
+        {
+          "id": "goal-6",
+          "name": "Não aumentar o estágio de Vampiro sem entender o custo",
+          "line": "Objetivo",
+          "why": "Os estágios alteram benefícios e penalidades. Para um iniciante, não trate “Stage 4” como obrigatório só porque parece mais vampiro."
+        },
+        {
+          "id": "goal-7",
+          "name": "Treinar montaria diariamente",
+          "line": "Objetivo",
+          "why": "Comece por Speed."
+        }
+      ],
+      "pending": [
+        "Mundus",
+        "Alimentação",
+        "Sets e equipamento definitivo",
+        "Champion Points"
+      ],
+      "checklistIds": [
+        "skill-1",
+        "skill-2",
+        "skill-3",
+        "skill-4",
+        "skill-5",
+        "skill-6",
+        "skill-7",
+        "skill-8",
+        "skill-9",
+        "skill-10",
+        "skill-11",
+        "skill-12",
+        "skill-13",
+        "skill-14",
+        "skill-15",
+        "skill-16",
+        "skill-17",
+        "skill-18",
+        "skill-19",
+        "goal-1",
+        "goal-2",
+        "goal-3",
+        "goal-4",
+        "goal-5",
+        "goal-6",
+        "goal-7"
+      ]
+    }
+  ]
+}
